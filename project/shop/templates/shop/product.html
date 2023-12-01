@@ -1,0 +1,10 @@
+{% extends 'shop/base.html' %}
+
+{% block title %} Product {% endblock %}
+
+{% block content %} 
+    Данные о товаре {{ product.title }}
+    <p>Размер: {{ product.size}}</p>
+    <p>Цена: {{ product.price }}</p>
+    <button>Купить</button>
+{% endblock %}

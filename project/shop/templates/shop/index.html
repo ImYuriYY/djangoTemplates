@@ -1,0 +1,37 @@
+
+
+{% extends 'shop/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+    <h1>{{ header }}</h1>
+    <h4>{% now 'j F, Y'%}</h4>
+    <h2>Наш пользователь</h2>
+    {% for key, value in user.items %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+
+
+    {% for value in user.values %}
+        <p>{{ value }}</p>
+    {% endfor %}
+
+    {% for key in user.keys %}
+        <p>{{ key }}</p>
+    {% endfor %}
+
+
+    <p>Ich weiss: </p>
+    {% for lang in langs %}
+        <p>{{ lang }}</p>
+    {% empty %}
+        <p> </p>
+    {% endfor %}
+
+    <p>Meine addresse: {{address.0}} {{address.1}} {{address.2}}</p>
+
+    {% autoescape off %}
+        {{text}}
+    {% endautoescape %}
+{% endblock %}

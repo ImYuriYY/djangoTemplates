@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Base {% endblock%}</title>
+</head>
+<body style="font-size: 20px; padding: 0; margin: 0; box-sizing: border-box;">
+    <header style="width: 100vw; height: 50px; background-color: grey;">
+        <ul style="list-style: none; display: flex; align-items: center; width: 100%; height: 100%; gap: 50px;">
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+                <a href="{% url 'contacts' %}">Contacts</a>
+            </li>
+        </ul>
+    </header>
+
+
+    {% block body %} Content {% endblock%}
+
+
+</body>
+</html>

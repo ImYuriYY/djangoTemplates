@@ -1,0 +1,16 @@
+{% extends 'work/base.html' %}
+{% block title %} Home {% endblock%}
+
+{% block body %} 
+
+    <p>Место обучения: {{ education }}</p>
+    <p>Группа: {{ group }}</p>
+    <p>Специальность: {{ specialization }}</p>
+    <p>Кем хочу стать: {{ wantBecome }}</p>
+
+
+
+    {% include 'work/form.html' %}
+
+
+{% endblock%}
